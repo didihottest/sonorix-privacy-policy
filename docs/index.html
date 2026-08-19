@@ -1,63 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sonorix - Privacy Policy</title>
-    <style>
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-        color: #333;
-      }
-      h1 {
-        color: #111;
-      }
-      h2 {
-        margin-top: 1.5rem;
-        color: #222;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Privacy Policy for Sonorix</h1>
-    <p><em>Last updated: August 19, 2026</em></p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Sonorix</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --border-color: #334155;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    .header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0 0 0.5rem 0;
+    }
+    .meta-info {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      color: var(--text-main);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.4rem;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    strong {
+      color: var(--text-main);
+    }
+    code {
+      background: var(--card-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: var(--accent);
+      font-family: monospace;
+    }
+    .footer {
+      margin-top: 4rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Privacy Policy for Sonorix</h1>
+      <div class="meta-info">
+        <strong>Developer:</strong> Ekou Dynamics | <strong>Effective Date:</strong> August 19, 2026
+      </div>
+    </div>
 
-    <p>
-      Sonorix ("we", "our", or "us") operates the Sonorix mobile application.
-    </p>
+    <section>
+      <h2>1. Overview</h2>
+      <p>This Privacy Policy governs the mobile application <strong>Sonorix</strong> ("App"), created by <strong>Ekou Dynamics</strong> ("we", "us", or "our"). Sonorix is designed as an offline-first ambient audio mixer and sleep aid application. We value user privacy and are committed to full transparency regarding data practices and device permission usage in compliance with Google Play Developer Policies.</p>
+    </section>
 
-    <h2>1. Information Collection and Use</h2>
-    <p>
-      Sonorix is an offline-first ambient sound & audio player application. We
-      <strong>do not collect, store, or transmit</strong> any personal data or
-      sensitive device information. All user preferences, custom mix presets,
-      and sound configurations remain stored strictly on your local device.
-    </p>
+    <section>
+      <h2>2. Data Collection, Storage, and Sharing</h2>
+      <p><strong>Sonorix does not collect, store, transmit, or sell any Personal Identifiable Information (PII) or sensitive personal user data.</strong></p>
+      <ul>
+        <li><strong>Personal Data:</strong> We do not ask for, harvest, or track names, email addresses, phone numbers, contacts, accounts, or location data.</li>
+        <li><strong>Device Data:</strong> We do not log unique device identifiers (e.g., IMEI, Android ID, Advertising ID).</li>
+        <li><strong>Local Storage:</strong> All user settings, custom audio mix presets, volume configurations, and preferences are stored exclusively on your local device memory using Android local database/storage APIs. This data never leaves your device.</li>
+      </ul>
+    </section>
 
-    <h2>2. Permissions Used</h2>
-    <p>
-      <strong>Notification Access (Optional):</strong> Used solely to detect
-      local media playback state to auto-pause ambient sound or overlay audio.
-      No notification content, metadata, or personal messaging data is logged,
-      collected, or uploaded.
-    </p>
+    <section>
+      <h2>3. Device Permissions & Purpose Declarations</h2>
+      <p>To deliver core sound mixing features, Sonorix requests limited Android device permissions. Each permission serves a explicit, restricted purpose:</p>
+      <ul>
+        <li>
+          <strong>Notification Access (Notification Listener Service / <code>BIND_NOTIFICATION_LISTENER_SERVICE</code>):</strong>
+          <br>
+          <em>Purpose:</em> Optional feature used solely to detect active background audio sessions from third-party media apps (e.g., Spotify, YouTube Music). This allows Sonorix to automatically pause or adjust ambient sound playback when other media starts playing.
+          <br>
+          <em>Data Handling:</em> No notification content, text messages, caller details, or notification metadata are recorded, read, stored, or transmitted off the device.
+        </li>
+        <li>
+          <strong>Foreground Service & Audio Focus (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>):</strong>
+          <br>
+          <em>Purpose:</em> Enables uninterrupted audio playback when the App runs in the background or when the screen is locked, displaying standard playback controls in the system notification drawer.
+          <br>
+          <em>Data Handling:</em> Controls local audio engine state only. No data collected.
+        </li>
+        <li>
+          <strong>Post Notifications (<code>POST_NOTIFICATIONS</code> - Android 13+):</strong>
+          <br>
+          <em>Purpose:</em> Displays active audio control notifications (Play/Pause/Timer) in the system tray while audio is active.
+        </li>
+        <li>
+          <strong>Wake Lock (<code>WAKE_LOCK</code>):</strong>
+          <br>
+          <em>Purpose:</em> Prevents the processor from sleeping during scheduled sleep timer sessions so audio fades out smoothly.
+        </li>
+      </ul>
+    </section>
 
-    <h2>3. Third-Party Services</h2>
-    <p>
-      Sonorix does not use third-party analytics, tracking SDKs, or advertising
-      networks.
-    </p>
+    <section>
+      <h2>4. Third-Party SDKs and Advertising</h2>
+      <p>Sonorix does not integrate third-party advertising networks, analytics tracking services (such as Firebase Analytics, Adjust, or AppsFlyer), or social media SDKs. No background data telemetry is transmitted to third parties.</p>
+    </section>
 
-    <h2>4. Contact Us</h2>
-    <p>
-      If you have any questions regarding privacy, contact us at:
-      <code>support@ekoudynamics.com</code>
-    </p>
-  </body>
+    <section>
+      <h2>5. Children's Privacy</h2>
+      <p>Sonorix does not knowingly collect data from children under the age of 13 (or under 16 in certain legal jurisdictions). Because the App does not collect any personal data from any user, it fully complies with the Children's Online Privacy Protection Act (COPPA) and GDPR regulations regarding minors.</p>
+    </section>
+
+    <section>
+      <h2>6. Security</h2>
+      <p>Since all application configuration data remains strictly local on the user's Android device, security relies on standard Android OS sandboxing mechanisms protecting app-private storage.</p>
+    </section>
+
+    <section>
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>We may update our Privacy Policy periodically to reflect changes in legal policies or app functionality. Any modifications will be posted on this page with an updated "Effective Date".</p>
+    </section>
+
+    <section>
+      <h2>8. Contact Us</h2>
+      <p>If you have any questions or concerns regarding this Privacy Policy or permission usage in Sonorix, please contact us at:</p>
+      <p>
+        <strong>Ekou Dynamics</strong><br>
+        Email: <code>support@ekoudynamics.com</code>
+      </p>
+    </section>
+
+    <div class="footer">
+      &copy; 2026 Ekou Dynamics. All rights reserved.
+    </div>
+  </div>
+</body>
 </html>
